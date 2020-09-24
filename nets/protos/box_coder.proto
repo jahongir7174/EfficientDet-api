@@ -1,0 +1,17 @@
+syntax = "proto2";
+
+package nets.protos;
+
+import "nets/protos/faster_rcnn_box_coder.proto";
+import "nets/protos/keypoint_box_coder.proto";
+import "nets/protos/mean_stddev_box_coder.proto";
+import "nets/protos/square_box_coder.proto";
+
+message BoxCoder {
+  oneof box_coder_oneof {
+    FasterRcnnBoxCoder faster_rcnn_box_coder = 1;
+    MeanStddevBoxCoder mean_stddev_box_coder = 2;
+    SquareBoxCoder square_box_coder = 3;
+    KeypointBoxCoder keypoint_box_coder = 4;
+  }
+}

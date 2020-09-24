@@ -1,0 +1,14 @@
+syntax = "proto2";
+
+package nets.protos;
+
+import "nets/protos/box_coder.proto";
+import "nets/protos/matcher.proto";
+import "nets/protos/region_similarity_calculator.proto";
+
+// Message to configure Target Assigner for object detectors.
+message TargetAssigner {
+  optional Matcher matcher = 1;
+  optional RegionSimilarityCalculator similarity_calculator = 2;
+  optional BoxCoder box_coder = 3;
+}

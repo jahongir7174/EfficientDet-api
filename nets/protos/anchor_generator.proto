@@ -1,0 +1,17 @@
+syntax = "proto2";
+
+package nets.protos;
+
+import "nets/protos/flexible_grid_anchor_generator.proto";
+import "nets/protos/grid_anchor_generator.proto";
+import "nets/protos/multiscale_anchor_generator.proto";
+import "nets/protos/ssd_anchor_generator.proto";
+
+message AnchorGenerator {
+  oneof anchor_generator_oneof {
+    GridAnchorGenerator grid_anchor_generator = 1;
+    SsdAnchorGenerator ssd_anchor_generator = 2;
+    MultiscaleAnchorGenerator multiscale_anchor_generator = 3;
+    FlexibleGridAnchorGenerator flexible_grid_anchor_generator = 4;
+  }
+}

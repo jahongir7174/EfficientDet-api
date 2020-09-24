@@ -1,0 +1,7 @@
+syntax = "proto2";
+
+package nets.protos;
+
+message BipartiteMatcher {
+  optional bool use_matmul_gather = 6 [default = false];
+}
