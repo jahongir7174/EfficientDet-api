@@ -1,6 +1,6 @@
 # EfficientDet
 
-EfficientDet implementation for object detection using Tensorflow2 Object detection API
+[EfficientDet](https://arxiv.org/pdf/1911.09070.pdf) implementation for object detection using TensorFlow 2 Object Detection API
 ### Usage
 * Put your label file to the `nets/data` folder, see example in this folder
 * Run `python generate.py` for generating train and test tensorflow record files. Please, change `set` and `output_path` arguments related to train and val set
